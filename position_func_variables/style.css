@@ -2,18 +2,31 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+}
+
+:root.dark {
+    --bgc: rgb(28, 28, 28);
+    --bordec: rgb(117, 117, 117);
+    --font-color: rgb(255, 255, 255);
+}
+
+:root.light {
+    --bgc: rgb(243, 243, 243);
+    --bordec: rgb(47, 47, 47);
+    --font-color: rgb(0, 0, 0);
 }
 
 body {
-    background-color: rgb(28, 28, 28);
+    background-color: var(--bgc);
     height: 2000px;
-    width: 100%;
-    position: relative;
+    width: 100vw;
+    color: var(--font-color);
+
+
 }
 
 section {
-    background-color: rgb(57, 57, 57);
+    background-color: var(--bgc);
     display: flex;
     height: 50px;
     align-items: center;
@@ -23,6 +36,7 @@ section {
 section, 
 header {
     padding: 0 clamp(0.5rem, 3vw, 3rem) 0 clamp(0.5rem, 3vw, 3rem);
+    z-index: 10;
 }
 
 ul {
@@ -34,7 +48,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--font-color);
 }
 
 section div {
@@ -51,13 +65,13 @@ section div {
 }
 
 header {
-    background-color: rgb(28, 28, 28);
+    background-color: var(--bgc);
     display: flex;
     height: 60px;
     align-items: center;
-    border-top: 1px solid rgb(117, 117, 117);
-    border-bottom: 1px solid rgb(117, 117, 117);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.492);
+    border-top: 1px solid var(--bordec);
+    border-bottom: 1px solid var(--bordec);
+    box-shadow: 0 5px 5px var(--bgc);
 
     position: sticky;
     top: 0px;
@@ -76,9 +90,9 @@ header {
 }
 
 #left div:first-child {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--font-color);
     padding: 5px 10px;
-    color: rgb(28, 28, 28);
+    color: var(--bgc);
     border-radius: 4px / 8px;
 }
 
@@ -92,9 +106,22 @@ header {
 
 input {
     flex: 0.5;
-    background-color: black;
+    background-color: transparent;
     border-radius: 3px;
-    border: 1px solid gray;
+    border: 1px solid var(--bordec);
     padding: 5px 20px;
     background-color: transparent;
+    color: var(--font-color);
+}
+
+button {
+    left: 50vw;
+    top: 200px;
+    position: fixed;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--bordec);
+    cursor: pointer;
+    color: var(--font-color);
 }
