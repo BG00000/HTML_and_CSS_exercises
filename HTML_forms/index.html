@@ -7,6 +7,110 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- label 'for' attribute must be equivalent to input 'id' -->
+
+    <form action="#" method="post">
+        <label for="first_name" required>First name:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Type here...">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email...">
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password...">
+   
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age...">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" placeholder="Date...">
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
+
+    </form>
+
+    <form action="#" method="post">
+        <textarea name="test" id="test" cols="30" rows="10">test</textarea>
+
+    <select name="name" id="name">
+        <optgroup label="names">
+            <option value="bob">bob</option>
+            <option value="bill">bill</option>
+            <option value="bryce" selected>*bryce</option>
+            <option value="sam" >sam</option>
+            <option value="will">will</option>
+        </optgroup>
+        <optgroup label="other"> 
+            <option value="stuff">stuff</option>
+        </optgroup>
+    </select>
+
+    <!-- radio btns must have same name attribute to interact -->
+
+    <input type="radio" id="op1" name="option" value="op1" required>
+    <label for="op1">option-1</label>
+
+    <input type="radio" id="op2" name="option" value="op2" checked>
+    <label for="op1">*option-2</label>
+
+    <input type="radio" id="op3" name="option" value="op3">
+    <label for="op1">option-3</label>
+
+
+
+    <fieldset>
+        <legend>Mode of transport</legend>
+        <input type="checkbox" id="car" name="mode" value="car" checked>
+        <label for="car">car</label>
     
+        <input type="checkbox" id="truck" name="mode" value="truck">
+        <label for="car">truck</label>
+    
+        <input type="checkbox" id="bus" name="mode" value="bus">
+        <label for="bus">bus</label>
+    </fieldset>
+
+
+    <label for="car">bus</label>
+
+
+
+    <div>
+        <input type="checkbox" id="newsletter" name="news_letter" checked>
+        <label for="newsletter">Send me the news letter</label>
+    </div>
+
+    <button type="submit">submits the form it is contained within</button>
+    
+    <button type="reset">reset btn</button>
+
+    <button type="button">generic button</button>
+
+<!-- always specify button 'type' in forms to avoid accidental submissions  -->
+
+
+    <fieldset>
+        <legend>what would you like to drink?</legend>
+        <div>
+            <input type="radio" name="drink" id="coffee" value="coffee">
+            <label for="coffee">coffee</label>
+        </div>
+
+        <input type="radio" name="drink" id="water" value="water">
+        <label for="water">water</label>
+
+
+    </fieldset>
+
+    <input type="email" name="email" id="email" placeholder="***email"  required>
+
+    <label for="sometext">postcode</label>
+    <input type="text" name="sometext" id="sometext" required maxlength="5" minlength="2">
+    
+
+    </form>
+
 </body>
 </html>
