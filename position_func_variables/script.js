@@ -1,9 +1,9 @@
 const button = document.querySelector('button')
 
 function setTheme() {
-    const root = document.documentElement;
-    const newTheme = root.className === 'dark' ? 'light' : 'dark';
-    root.className = newTheme;
+    const html = document.querySelector('html');
+    const newTheme = html.className === 'dark' ? 'light' : 'dark';
+    html.className = newTheme;
   }
   
 document.querySelector('button').addEventListener('click', setTheme)
