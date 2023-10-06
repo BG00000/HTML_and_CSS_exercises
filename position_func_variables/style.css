@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: rgb(28, 28, 28);
+    height: 2000px;
+    width: 100%;
+    position: relative;
+}
+
+section {
+    background-color: rgb(57, 57, 57);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+section, 
+header {
+    padding: 0 clamp(0.5rem, 3vw, 3rem) 0 clamp(0.5rem, 3vw, 3rem);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    padding-right: 5px;
+}   
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+section div {
+    justify-content: flex-end;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+
+nav, 
+section div {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+header {
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    height: 60px;
+    align-items: center;
+    border-top: 1px solid rgb(117, 117, 117);
+    border-bottom: 1px solid rgb(117, 117, 117);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.492);
+
+    position: sticky;
+    top: 0px;
+}
+
+#left {
+    gap: 20px;
+    font-size: 23px;
+    align-items: center;
+}
+
+#left, 
+#right {
+    display: flex;
+    flex: 1;
+}
+
+#left div:first-child {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    color: rgb(28, 28, 28);
+    border-radius: 4px / 8px;
+}
+
+#left div:last-child {
+    font-size: clamp(1rem, 2.5vw,  2rem);
+}
+
+#right {
+    justify-content: flex-end;
+}
+
+input {
+    flex: 0.5;
+    background-color: black;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding: 5px 20px;
+    background-color: transparent;
+}
